@@ -51,7 +51,7 @@ app.post('/api/add/books',(req,res)=>{
    Book.find().sort({_id:order}).limit(limit).exec((err,doc)=>{
      if(err) res.status(400).send(err);
      res.send(doc)
-   })
+   }) 
  })
  app.get('/api/books/:id',(req,res)=>{
    Book.findById(req.params.id,(err,doc)=>{
